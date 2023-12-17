@@ -27,8 +27,7 @@ function drawGame() {
   msg.innerText = `Game is drawn play again ! `;
   msgContainer.classList.remove("hide");
   main.classList.add("hide");
-  var audio = new Audio( lose + ".mp3");
-  audio.play();
+ playSound(lose);
 
 }
 
@@ -78,8 +77,7 @@ const checkWinner = () => {
     msg.innerText = `Congratulations, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     main.classList.add("hide");
-  var audio = new Audio( win + ".mp3");
-  audio.play();
+ playSound(win);
 
   };
   
