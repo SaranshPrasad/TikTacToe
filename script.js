@@ -18,16 +18,13 @@ const winPatterns = [
     [6,7,8]
 ];
 
-function playSound(name) {
-  var audio = new Audio( name + ".mp3");
-  audio.play();
-}
-
 function drawGame() {
+     var audi = new Audio( "lose.mp3");
+  audi.play();
   msg.innerText = `Game is drawn play again ! `;
   msgContainer.classList.remove("hide");
   main.classList.add("hide");
- playSound(lose);
+
 
 }
 
@@ -74,10 +71,12 @@ const checkWinner = () => {
   };
 
   const showWinner = (winner) => {
+       var audio = new Audio(   "win.mp3");
+      audio.play();
     msg.innerText = `Congratulations, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     main.classList.add("hide");
- playSound(win);
+
 
   };
   
